@@ -3,9 +3,10 @@ $access_token = 't1K3D4zkXAJFVVwsUcgVVfnVYZLdIyxXLlJtodYGIdOK0MJm8yczDGhJz5h7dbF
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
-$Light = file_get_contents('https://api.thingspeak.com/channels/509782/fields/3/last.txt');
-$HUM = file_get_contents('https://api.thingspeak.com/channels/509782/fields/2/last.txt');
-$TEM = file_get_contents('https://api.thingspeak.com/channels/509782/fields/1/last.txt');
+
+$Light = file_get_contents('https://api.thingspeak.com/channels/823506/fields/3/last.txt');
+$HUM = file_get_contents('https://api.thingspeak.com/channels/823506/fields/2/last.txt');
+$TEM = file_get_contents('https://api.thingspeak.com/channels/823506/fields/1/last.txt');
 $events = json_decode($content, true);
  if ($HUM < 55) {
         $humi = "รู้สึกผิวแห้ง ไม่สบายตัว"  ;;
