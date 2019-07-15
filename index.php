@@ -1,11 +1,13 @@
 <?php
-$access_token = '9G7umqWJQG5iSqeGem3E4iYGap1DcuIpV2O6UldOppui5boyKfuoBifVC8lOmcq7w5Ua+oVVloOTlztg9TvZA5wkP2UBe+RmEVK38bdEuzlOjzwbADdMtnkHXQcUzz8N3/WYxwic+ouuIXn4y51SzAdB04t89/1O/w1cDnyilFU=';
+$access_token = 'QEG3iAByCnGy8YzBcuFZ9w+FiyD6JqQo63i79AOxehzx02htujOAZkNRAAFEg8rkMz3R3wD7p4S7EE/O6UFnqb2YK0mDrojyIEeKolS0/cqZT1mesRrv8jT0rxju1ikdsImW3lKC+fLNejnESqxEAwdB04t89/1O/w1cDnyilFU=';
 // Get POST body content
 $content = file_get_contents('php://input');
 // Parse JSON
-$Light = file_get_contents('https://api.thingspeak.com/channels/509782/fields/3/last.txt');
-$HUM = file_get_contents('https://api.thingspeak.com/channels/509782/fields/2/last.txt');
-$TEM = file_get_contents('https://api.thingspeak.com/channels/509782/fields/1/last.txt');
+//https://api.thingspeak.com/channels/823506/fields/1
+//$Light = file_get_contents('https://api.thingspeak.com/channels/509782/fields/3/last.txt');
+$Light = file_get_contents('https://api.thingspeak.com/channels/823506/fields/3/last.txt');
+$HUM = file_get_contents('https://api.thingspeak.com/channels/823506/fields/2/last.txt');
+$TEM = file_get_contents('https://api.thingspeak.com/channels/823506/fields/1/last.txt');
 $events = json_decode($content, true);
  if ($HUM < 55) {
         $humi = "รู้สึกผิวแห้ง ไม่สบายตัว"  ;;
